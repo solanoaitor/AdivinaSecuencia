@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.EstructuraPartidaTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-11-01T23:23:41" hostname="MacBook-Pro-de-Aitor.local" time="0.119">
+  <properties/>
+  <testcase name="testSolucion()" classname="tests.EstructuraPartidaTests" time="0.08"/>
+  <testcase name="testGetSolucion()" classname="tests.EstructuraPartidaTests" time="0.01"/>
+  <testcase name="testRevisaNumero()" classname="tests.EstructuraPartidaTests" time="0.005"/>
+  <testcase name="testIntroduceBolas()" classname="tests.EstructuraPartidaTests" time="0.011"/>
+  <testcase name="testIntroduceIntentos()" classname="tests.EstructuraPartidaTests" time="0.003"/>
+  <testcase name="testGetArrayIntentos()" classname="tests.EstructuraPartidaTests" time="0.002"/>
+  <testcase name="testSetIntentos()" classname="tests.EstructuraPartidaTests" time="0.002"/>
+  <testcase name="testGetIntentos()" classname="tests.EstructuraPartidaTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

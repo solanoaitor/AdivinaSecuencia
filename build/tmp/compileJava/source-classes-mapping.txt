@@ -1,0 +1,12 @@
+modelo/Negra.java
+ modelo.Negra
+modelo/Blanca.java
+ modelo.Blanca
+modelo/Bola.java
+ modelo.Bola
+vista/MostrarJuego.java
+ vista.MostrarJuego
+modelo/EstructuraPartida.java
+ modelo.EstructuraPartida
+controlador/Jugar.java
+ controlador.Jugar
