@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+//TODO: reducir complejidad
 public class EstructuraPartida {
     private int solucion[];
     private String intentos[][];
@@ -29,17 +30,16 @@ public class EstructuraPartida {
         }
         return solucion;
     }
-
+    //TODO: reducir complejidad
     public boolean revisaNumero(String valor) {
         if(valor.length() != 4) {
             return false;
-        }else {
-            try {
-                Integer.parseInt(valor);
-                return true;
-            } catch (NumberFormatException e) {
-                return false;
-            }
+        }
+        try {
+            Integer.parseInt(valor);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
         }
     }
 

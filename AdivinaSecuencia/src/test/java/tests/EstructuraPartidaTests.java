@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class EstructuraPartidaTests {
 
+    //TODO: reducir complejidad
     @Test
     public void testSolucion() {
         EstructuraPartida partida = new EstructuraPartida(10);

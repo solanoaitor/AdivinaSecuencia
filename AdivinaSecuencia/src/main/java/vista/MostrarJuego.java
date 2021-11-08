@@ -24,6 +24,7 @@ public class MostrarJuego {
         System.out.println("--------------------------");
     }
 
+    //TODO: reducir complejidad
     public void muestraResultado(String intentos[][]) {
         System.out.println("                 Bolas       Blancas  Negras" );
         int limiteIntentos = 10;

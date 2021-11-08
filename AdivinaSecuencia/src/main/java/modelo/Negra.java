@@ -11,6 +11,7 @@ public class Negra implements Bola{
         this.encontrado = false;
     }
 
+    //TODO: reducir complejidad.
     @Override
     public boolean revisaBola(String intentos[][], int solucionFinal[], int intento) {
         bolaNegra = 0;
