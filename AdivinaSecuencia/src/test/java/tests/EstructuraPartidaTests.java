@@ -17,18 +17,15 @@ public class EstructuraPartidaTests {
         solucion = partida.solucion();
 
         for(int i = 0; i < limite; i++) {
+            if(solucion[i] < 10 && solucion[i] >= 0) {
+                rango = true;
+            }
+            assertTrue(rango);
             for(int j = 0; j < limite; j++) {
                 if(i != j){
                     assertNotEquals(solucion[i], solucion[j]);
                 }
             }
-        }
-
-        for(int i = 0; i < limite; i++) {
-            if(solucion[i] < 10 && solucion[i] >= 0) {
-                rango = true;
-            }
-            assertTrue(rango);
         }
     }
 
