@@ -7,7 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class EstructuraPartidaTests {
 
-    //TODO: reducir complejidad
+    /**
+     * Este metodo comprueba que los numeros recibidos y guardados en el array
+     * son distintos. Además, comprueba que los números estan comprendidos dentro
+     * del rango adecuado [0,9].
+     * @param No recibe parametros la función testSolucion().
+     * @return void
+     */
     @Test
     public void testSolucion() {
         EstructuraPartida partida = new EstructuraPartida(10);
@@ -15,16 +21,17 @@ public class EstructuraPartidaTests {
         int limite = 4;
         int[] solucion = new int[4];
         solucion = partida.solucion();
-
-        for(int i = 0; i < limite; i++) {
-            if(solucion[i] < 10 && solucion[i] >= 0) {
+        int i, j;
+        int solucion_i, solucion_j;
+        for(i = 0, j = 0; i < limite; i++,j++) {
+            solucion_i = solucion[i];
+            solucion_j = solucion[j];
+            if(solucion_i >= 0 && solucion_i < 10) {
                 rango = true;
             }
             assertTrue(rango);
-            for(int j = 0; j < limite; j++) {
-                if(i != j){
-                    assertNotEquals(solucion[i], solucion[j]);
-                }
+            if(i != j){
+                assertNotEquals(solucion_i, solucion_j);
             }
         }
     }
