@@ -86,16 +86,23 @@ public class EstructuraPartidaTests {
         assertNotEquals(intentos[0][3], "1");
     }
 
+    /**
+     * Este metodo comprueba si el array bolas guarda los valores correctamente
+     * @param No recibe parametros la función testIntroduceBolas().
+     * @return void
+     */
     @Test
     public void testIntroduceBolas() {
         EstructuraPartida partida = new EstructuraPartida(10);
-        String arrayAttempts[][] = partida.introduceBolas(1,2);
+        String[][] bolas = partida.introduceBolas(3,5);
 
-        assertEquals(arrayAttempts[0][4], "1");
-        assertEquals(arrayAttempts[0][5], "2");
+        assertEquals(bolas[0][4], "3");
+        assertEquals(bolas[0][5], "5");
 
-        assertNotEquals(arrayAttempts[0][4], "3");
-        assertNotEquals(arrayAttempts[0][5], "0");
+        assertNotEquals(bolas[0][4], "0");
+        assertNotEquals(bolas[0][5], "1");
+        assertNotEquals(bolas[0][4], "1");
+        assertNotEquals(bolas[0][5], "0");
 
     }
 
