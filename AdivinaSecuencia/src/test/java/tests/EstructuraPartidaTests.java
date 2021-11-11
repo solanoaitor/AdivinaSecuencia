@@ -8,10 +8,104 @@ import static org.junit.jupiter.api.Assertions.*;
 public class EstructuraPartidaTests {
 
     /**
+     * Este método pretende comprovar si funciona el método getIntentos()
+     * i se obtienen los intentos actuales correctamente.
+     * ACLARACIÓN: Inicialmente, cuando empezamos el juego no hemos realizado ningun
+     * intento.
+     * @param
+     * @return void
+     */
+    @Test
+    public void testGetIntentos() {
+        EstructuraPartida partida = new EstructuraPartida(10);
+
+        assertEquals(0, partida.getIntentos());
+
+        assertNotEquals(7, partida.getIntentos());
+    }
+
+    /**
+     * Este método pretende comprovar si funciona el método setIntentos()
+     * i se asigna correctamente el número de intentos realizados.
+     * @param
+     * @return void
+     */
+    @Test
+    public void testSetIntentos() {
+        EstructuraPartida partida = new EstructuraPartida(10);
+        partida.setIntentos(8);
+
+        assertEquals(partida.getIntentos(), 8);
+        assertNotEquals(partida.getIntentos(), 52);
+
+        partida.setIntentos(9);
+        assertNotEquals(partida.getIntentos(), 52);
+        assertEquals(partida.getIntentos(), 9);
+    }
+
+    /**
+     * Este método pretende comprovar si funciona correctamente el método
+     * getArraySolucion()
+     * @param
+     * @return void
+     */
+    @Test
+    public void testGetSolucion() {
+        EstructuraPartida partida = new EstructuraPartida(10);
+        int arraySolutionTrue[] = new int[4];
+
+        assertArrayEquals(arraySolutionTrue, partida.getArraySolucion());
+
+    }
+
+    /**
+     * Este método pretende comprovar que si se introduce un array de soluciones
+     * incorrectas el método getArraySolucion() obtendrá valores diferentes.
+     * @param
+     * @return void
+     */
+    @Test
+    public void testGetIncorrectSolucion() {
+        EstructuraPartida partida = new EstructuraPartida(10);
+        int arraySolutionIncorrect[] = new int[2];
+
+        assertNotEquals(arraySolutionIncorrect, partida.getArraySolucion());
+
+    }
+
+    /**
+     * Este método pretende comprovar si funciona correctamente el método
+     * getArrayIntentos()
+     * @param
+     * @return void
+     */
+    @Test
+    public void testGetArrayIntentos() {
+        EstructuraPartida partida = new EstructuraPartida(10);
+        String arrayIntentosTrue[][] = new String[10][6];
+
+        assertArrayEquals(arrayIntentosTrue, partida.getArrayIntentos());
+    }
+
+    /**
+     * Este método pretende comprovar que si se introduce un array de intentos
+     * incorrecto el método getArrayIntentos() obtendrá valores diferentes.
+     * @param
+     * @return void
+     */
+    @Test
+    public void testGetIncorrectArrayIntentos() {
+        EstructuraPartida partida = new EstructuraPartida(10);
+        String[][] arrayIntentosFalse = new String[10][5];
+
+        assertNotEquals(arrayIntentosFalse, partida.getArrayIntentos());
+    }
+
+    /**
      * Este metodo comprueba que los numeros recibidos y guardados en el array
      * son distintos. Además, comprueba que los números estan comprendidos dentro
      * del rango adecuado [0,9].
-     * @param No recibe parametros la función testSolucion().
+     * @param
      * @return void
      */
     @Test
@@ -38,7 +132,7 @@ public class EstructuraPartidaTests {
 
     /**
      * Este metodo comprueba si el objeto Mock introduce valores válidos o inválidos.
-     * @param No recibe parametros la función testRevisaNumero().
+     * @param
      * @return void
      */
     @Test
@@ -66,7 +160,7 @@ public class EstructuraPartidaTests {
 
     /**
      * Este metodo comprueba si los valores se guardan correctamente en el array de intentos.
-     * @param No recibe parametros la función testIntroduceIntentos().
+     * @param
      * @return void
      */
     @Test
@@ -88,7 +182,7 @@ public class EstructuraPartidaTests {
 
     /**
      * Este metodo comprueba si el array bolas guarda los valores correctamente
-     * @param No recibe parametros la función testIntroduceBolas().
+     * @param
      * @return void
      */
     @Test
@@ -104,44 +198,5 @@ public class EstructuraPartidaTests {
         assertNotEquals(bolas[0][4], "1");
         assertNotEquals(bolas[0][5], "0");
 
-    }
-
-    @Test
-    public void testGetSolucion() {
-        EstructuraPartida partida = new EstructuraPartida(10);
-        int arraySolutionTrue[] = new int[4];
-
-        assertArrayEquals(arraySolutionTrue, partida.getArraySolucion());
-
-    }
-
-    @Test
-    public void testGetArrayIntentos() {
-        EstructuraPartida partida = new EstructuraPartida(10);
-        String arrayAttemptsTrue[][] = new String[10][6];
-
-        assertArrayEquals(arrayAttemptsTrue, partida.getArrayIntentos());
-    }
-
-    @Test
-    public void testGetIntentos() {
-        EstructuraPartida partida = new EstructuraPartida(10);
-        int attempt = 0;
-
-        assertEquals(attempt, partida.getIntentos());
-
-        attempt = 9;
-        assertNotEquals(attempt, partida.getIntentos());
-    }
-
-    @Test
-    public void testSetIntentos() {
-        EstructuraPartida partida = new EstructuraPartida(10);
-        partida.setIntentos(5);
-
-        assertEquals(partida.getIntentos(), 5);
-
-        partida.setIntentos(9);
-        assertNotEquals(partida.getIntentos(), 5);
     }
 }
