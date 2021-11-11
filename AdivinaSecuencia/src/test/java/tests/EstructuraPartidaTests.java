@@ -64,21 +64,26 @@ public class EstructuraPartidaTests {
         }
     }
 
+    /**
+     * Este metodo comprueba si los valores se guardan correctamente en el array de intentos.
+     * @param No recibe parametros la función testIntroduceIntentos().
+     * @return void
+     */
     @Test
     public void testIntroduceIntentos() {
         EstructuraPartida partida = new EstructuraPartida(10);
-        String arrayAttempts[][] = partida.introduceIntentos("2893");
+        String intentos[][] = partida.introduceIntentos("5372");
 
-        assertEquals(arrayAttempts[0][0], "2");
-        assertEquals(arrayAttempts[0][1], "8");
-        assertEquals(arrayAttempts[0][2], "9");
-        assertEquals(arrayAttempts[0][3], "3");
+        assertEquals(intentos[0][0], "5");
+        assertEquals(intentos[0][1], "3");
+        assertEquals(intentos[0][2], "7");
+        assertEquals(intentos[0][3], "2");
 
-        assertNotEquals(arrayAttempts[0][0], "1");
-        assertNotEquals(arrayAttempts[0][1], "6");
-        assertNotEquals(arrayAttempts[0][2], "7");
-        assertNotEquals(arrayAttempts[0][3], "2");
-
+        assertNotEquals(intentos[0][0], "1");
+        assertNotEquals(intentos[0][1], "6");
+        assertNotEquals(intentos[0][2], "3");
+        assertNotEquals(intentos[0][3], "4");
+        assertNotEquals(intentos[0][3], "1");
     }
 
     @Test
