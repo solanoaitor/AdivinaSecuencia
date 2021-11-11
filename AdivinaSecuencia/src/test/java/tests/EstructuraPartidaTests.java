@@ -36,26 +36,36 @@ public class EstructuraPartidaTests {
         }
     }
 
-    @Test public void testRevisaNumero() {
+    /**
+     * Este metodo comprueba si el objeto Mock introduce valores válidos o inválidos.
+     * @param No recibe parametros la función testRevisaNumero().
+     * @return void
+     */
+    @Test
+    public void testRevisaNumero() {
         EstructuraPartida partida = new EstructuraPartida(10);
         MockRevisarNumeros mock = new MockRevisarNumeros();
 
         mock.introducenNumerosCorrectos();
         mock.introduceNumerosIncorrectos();
+        int len_numeros_incorrectos = mock.getArrayNumerosIncorrectos().length;
+        boolean checkCorrectNumbers;
 
-        for (int index = 0; index < mock.getArrayNumerosCorrectos().length; index++) {
-            boolean checkCorrectNumbers = partida.revisaNumero(mock.getArrayNumerosCorrectos()[index]);
-            assertTrue(checkCorrectNumbers);
-        }
+        checkCorrectNumbers = partida.revisaNumero(mock.getArrayNumerosCorrectos()[0]);
+        assertTrue(checkCorrectNumbers);
+        checkCorrectNumbers = partida.revisaNumero(mock.getArrayNumerosCorrectos()[1]);
+        assertTrue(checkCorrectNumbers);
+        checkCorrectNumbers = partida.revisaNumero(mock.getArrayNumerosCorrectos()[2]);
+        assertTrue(checkCorrectNumbers);
 
-
-        for (int index = 0; index < mock.getArrayNumerosIncorrectos().length; index++) {
+        for (int index = 0; index < len_numeros_incorrectos; index++) {
             boolean checkFailNumbers = partida.revisaNumero(mock.getArrayNumerosIncorrectos()[index]);
             assertFalse(checkFailNumbers);
         }
     }
 
-    @Test public void testIntroduceIntentos() {
+    @Test
+    public void testIntroduceIntentos() {
         EstructuraPartida partida = new EstructuraPartida(10);
         String arrayAttempts[][] = partida.introduceIntentos("2893");
 
@@ -71,7 +81,8 @@ public class EstructuraPartidaTests {
 
     }
 
-    @Test public void testIntroduceBolas() {
+    @Test
+    public void testIntroduceBolas() {
         EstructuraPartida partida = new EstructuraPartida(10);
         String arrayAttempts[][] = partida.introduceBolas(1,2);
 
@@ -83,7 +94,8 @@ public class EstructuraPartidaTests {
 
     }
 
-    @Test public void testGetSolucion() {
+    @Test
+    public void testGetSolucion() {
         EstructuraPartida partida = new EstructuraPartida(10);
         int arraySolutionTrue[] = new int[4];
 
@@ -91,14 +103,16 @@ public class EstructuraPartidaTests {
 
     }
 
-    @Test public void testGetArrayIntentos() {
+    @Test
+    public void testGetArrayIntentos() {
         EstructuraPartida partida = new EstructuraPartida(10);
         String arrayAttemptsTrue[][] = new String[10][6];
 
         assertArrayEquals(arrayAttemptsTrue, partida.getArrayIntentos());
     }
 
-    @Test public void testGetIntentos() {
+    @Test
+    public void testGetIntentos() {
         EstructuraPartida partida = new EstructuraPartida(10);
         int attempt = 0;
 
@@ -108,7 +122,8 @@ public class EstructuraPartidaTests {
         assertNotEquals(attempt, partida.getIntentos());
     }
 
-    @Test public void testSetIntentos() {
+    @Test
+    public void testSetIntentos() {
         EstructuraPartida partida = new EstructuraPartida(10);
         partida.setIntentos(5);
 
