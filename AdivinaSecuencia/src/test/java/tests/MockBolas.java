@@ -15,19 +15,19 @@ public class MockBolas {
     /**
      * Este método pretende inicializar los arrays de intentos y el de soluciones.
      * ANOTACIÓN: Inicializamos el array de soluciones indicando que tenemos 4 posibles
-     * soluciones. Inicializamos el array de intentos con 10 intentos posibles y 4 + 2.
+     * soluciones. Inicializamos el array de intentos con 2 intentos posibles y 4 + 2.
      * Donde 4 hace referencia a los números y 2 hace referencia a los dos tipos de bolas posibles
      * (blancas y negras).
      * @param
      * @constructor MockBolas
      */
     public MockBolas() {
-        this.intentos = new String[10][6];
+        this.intentos = new String[2][6];
         this.solucion = new int[4];
     }
 
     /**
-     * Este método pretende obtener los intentos.
+     * Este método pretende obtener los intentos del array de intentos.
      * @param
      * @return String[][]
      */
@@ -36,7 +36,7 @@ public class MockBolas {
     }
 
     /**
-     * Este método pretende obtener las soluciones.
+     * Este método pretende obtener las soluciones del array de soluciones.
      * @param
      * @return int[]
      */
