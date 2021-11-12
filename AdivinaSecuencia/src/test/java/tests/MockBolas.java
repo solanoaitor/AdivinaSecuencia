@@ -57,14 +57,12 @@ public class MockBolas {
         intentos[0][3] = "3";
         intentos[0][4] = "4";
         intentos[0][5] = "5";
-        intentos[0][6] = "6";
         intentos[1][0] = "0";
         intentos[1][1] = "1";
         intentos[1][2] = "2";
         intentos[1][3] = "3";
         intentos[1][4] = "4";
         intentos[1][5] = "5";
-        intentos[1][6] = "6";
     }
 
     /**
@@ -87,10 +85,10 @@ public class MockBolas {
      * @return void
      */
     public void solucionNegras() {
-        solucion[0] = 0;
-        solucion[1] = 1;
-        solucion[2] = 2;
-        solucion[3] = 3;
+        solucion[0] = 3;
+        solucion[1] = 2;
+        solucion[2] = 1;
+        solucion[3] = 0;
     }
 
     /**
