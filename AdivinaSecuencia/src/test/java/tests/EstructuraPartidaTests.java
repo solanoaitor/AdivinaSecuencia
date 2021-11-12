@@ -5,6 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * @author 		Desirée y Aitor
+ * @name 		EstructuraPartidaTests.java
+ * @description	EstructuraPartidaTests: Realiza los test de las funciones
+ * asociadas a EstructuraPartida.java
+ */
+
 public class EstructuraPartidaTests {
 
     /**
