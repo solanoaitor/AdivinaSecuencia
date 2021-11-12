@@ -6,6 +6,7 @@ package tests;
  * @description	MockBolas: Esta clase tiene como objetivo comprobar en los test el funcionamiento
  * de los arrays de intentos y otro de soluciones (el de soluciones tiene como objetivo comprobar
  * las bolas negras y blancas).
+ * @test testRevisaBolasNegras(), testRevisaBolasBlancas()
  */
 
 public class MockBolas {
