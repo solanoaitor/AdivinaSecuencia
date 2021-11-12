@@ -6,8 +6,61 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * @author 		Desirée y Aitor
+ * @name 		BolasTests.java
+ * @description	BolasTests: Realiza los test de las funciones
+ * asociadas a Blanca.java y Negra.java
+ */
 public class BolasTests {
 
+    /**
+     * Este método pretende comprovar si funciona el método getBolaNegra()
+     * i se asigna correctamente el número de bolas negras.
+     * @param
+     * @return void
+     */
+    @Test
+    public void testGetBolaNegra() {
+        Negra bolaNegra = new Negra();
+        int balls = 0, get_bolaNegra = bolaNegra.getBolaNegra();
+        assertEquals(balls, get_bolaNegra);
+
+        balls = 2;
+        assertNotEquals(balls, get_bolaNegra);
+
+        balls = 3;
+        assertNotEquals(balls, get_bolaNegra);
+
+    }
+
+    /**
+     * Este método pretende comprovar si funciona el método getBolaBlanca()
+     * i se asigna correctamente el número de bolas blancas.
+     * @param
+     * @return void
+     */
+    @Test
+    public void testGetBolaBlanca() {
+        Blanca bolaBlanca = new Blanca();
+        int balls = 0;
+        int get_bolaBlanca = bolaBlanca.getBolaBlanca();
+        assertEquals(balls, get_bolaBlanca);
+
+        balls = 2;
+        assertNotEquals(balls, get_bolaBlanca);
+
+        balls = 2;
+        assertNotEquals(balls, get_bolaBlanca);
+
+    }
+
+    /**
+     * Este método pretende comprovar si funciona el método revisaBola() para las bolas negras.
+     * Utilizamos un objeto Mock para crear arrays
+     * @param
+     * @return void
+     */
     @Test
     public void testRevisaBolasNegras() {
         Negra bolasNegras = new Negra();
@@ -15,16 +68,20 @@ public class BolasTests {
 
         mockBalls.arrayIntentos();
         mockBalls.solucionNegras();
-
-        boolean bolasNegrasTrue = bolasNegras.revisaBola(mockBalls.getIntentos(), mockBalls.getSolucion(), 0);
-        assertTrue(bolasNegrasTrue);
+        String[][] mock_intentos = mockBalls.getIntentos();
+        assertTrue(bolasNegras.revisaBola(mock_intentos, mockBalls.getSolucion(), 0));
 
         mockBalls.solucionFalsa();
 
-        boolean bolasNegrasFalse = bolasNegras.revisaBola(mockBalls.getIntentos(), mockBalls.getSolucion(), 0);
-        assertFalse(bolasNegrasFalse);
+        assertFalse(bolasNegras.revisaBola(mock_intentos, mockBalls.getSolucion(), 0));
     }
 
+    /**
+     * Este método pretende comprovar si funciona el método revisaBola() para las bolas blancas
+     * Utilizamos un objeto Mock para crear arrays
+     * @param
+     * @return void
+     */
     @Test
     public void testRevisaBolasBlancas() {
         Blanca bolasBlancas = new Blanca();
@@ -33,36 +90,12 @@ public class BolasTests {
         mockBalls.arrayIntentos();
         mockBalls.solucionBlancas();
 
-        boolean bolasBlancasTrue = bolasBlancas.revisaBola(mockBalls.getIntentos(), mockBalls.getSolucion(), 0);
-        assertTrue(bolasBlancasTrue);
+        String[][] mock_intentos = mockBalls.getIntentos();
+        assertTrue(bolasBlancas.revisaBola(mock_intentos, mockBalls.getSolucion(), 0));
 
         mockBalls.solucionFalsa();
 
-        boolean bolasBlancasFalse = bolasBlancas.revisaBola(mockBalls.getIntentos(), mockBalls.getSolucion(), 0);
-        assertFalse(bolasBlancasFalse);
+        assertFalse(bolasBlancas.revisaBola(mock_intentos, mockBalls.getSolucion(), 0));
     }
 
-    @Test
-    public void testGetBolaNegra() {
-        Negra bolaNegra = new Negra();
-        int balls = 0;
-
-        assertEquals(balls, bolaNegra.getBolaNegra());
-
-        balls = 4;
-        assertNotEquals(balls, bolaNegra.getBolaNegra());
-
-    }
-
-    @Test
-    public void testGetBolaBlanca() {
-        Blanca bolaBlanca = new Blanca();
-        int balls = 0;
-
-        assertEquals(balls, bolaBlanca.getBolaBlanca());
-
-        balls = 4;
-        assertNotEquals(balls, bolaBlanca.getBolaBlanca());
-
-    }
 }
