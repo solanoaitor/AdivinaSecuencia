@@ -16,7 +16,7 @@ public class BolasTests {
 
     /**
      * Este método pretende comprovar si funciona el método getBolaNegra()
-     * i se asigna correctamente el número de bolas negras.
+     * y se asigna correctamente el número de bolas negras.
      * @param
      * @return void
      */
@@ -36,7 +36,7 @@ public class BolasTests {
 
     /**
      * Este método pretende comprovar si funciona el método getBolaBlanca()
-     * i se asigna correctamente el número de bolas blancas.
+     * y se asigna correctamente el número de bolas blancas.
      * @param
      * @return void
      */

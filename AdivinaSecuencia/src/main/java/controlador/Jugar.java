@@ -7,6 +7,26 @@ import vista.MostrarJuego;
 
 import java.util.Scanner;
 
+/**
+ * @author 		Desirée y Aitor
+ * @name 		Jugar.java
+ * @description	Jugar: Controlador principal de la aplicación, donde ejecutará un main de nuestro juego.
+ *
+ * @test JugarTests.java
+ *       Ejecuta los test automaticamente tanto de modelo, visto y controlador.
+ *       Creados con valores mockObjects 100% success.
+ *       Para realizar el test correctamente:
+ *       - Debemos comprobar que el método 'public void testMain(String seleccionaOpcion, String[] valores)' no esté comentado.
+ *       - Debemos comprobar que el método 'public static void main(String[] args)' esté comentado.
+ *       - Clicar en Play con coverage en JugarTest.java, ejecutará automaticamente los test con sus respectivos resultados.
+ *       - Si ejecutamos el test sin comentar el main del juego nos saldrá un coverage menor al 100% ya que no pasará por esas
+ *       lineas de código.
+ *
+ * @user Esta parte únicamente es para jugar al juego, seleccionaremos la opción de ejecutar el main y podremos jugar al juego.
+ *       Debemos comprobar que el método 'public static void main(String[] args)' no esté comentado.
+ *
+ */
+
 public class Jugar {
     private MostrarJuego mostrarJuego;
     private Scanner reader;
@@ -17,6 +37,17 @@ public class Jugar {
     private String opcion;
     private boolean fin;
 
+    /**
+     * @constructor Creación de el objeto con sus atributos.
+     * @blanca      Modelo: Creación de la bola blanca
+     * @negra       Modelo: Creación de la bola negra
+     * @partida     Modelo: Creación de la lógica de el programa
+     * @mostrarJuego Vista: Output para mostrar la partida y el juego
+     * @valor       Opción que introduce el usuario
+     * @opcion      Opción para el usuario, puede jugar o salir del juego
+     * @fin         Valor de cada usuario en cada intento
+     * @reader      Objeto para leer entradas de teclado
+     */
     public Jugar() {
         this.mostrarJuego = new MostrarJuego();
         this.reader = new Scanner(System.in);
@@ -28,7 +59,9 @@ public class Jugar {
         this.fin = false;
     }
 
-    //TODO: reducir complejidad
+    /**
+     * @main    Ejecución de el programa para que el usuario pueda jugar.
+     */
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);
@@ -92,47 +125,47 @@ public class Jugar {
             }
         }while(opcion != "0");
     }
-    //Función para provar el test
-    public void testMain(String selectedOption, String[] values) {
-        int valuesIntent = 0;
+
+    /**
+     * @testMain				Execución del programa para realizar todo el test, funciona con números fijados.
+     * @param seleccionaOpcion 	Opción que queremos jugar.
+     * @param valores			Contiene los valors finales para cada intento del usuario, en este caso estan fijados por un mockObject.
+     */
+    public void testMain(String seleccionaOpcion, String[] valores) {
+
+        int valoresIntentos = 0;
 
         mostrarJuego.limpiar();
         mostrarJuego.instrucciones();
 
-        if(selectedOption.equals("0")) {
+        if(seleccionaOpcion.equals("0")) {
             mostrarJuego.salirJuego();
         }else {
             partida.solucion();
 
-            if(selectedOption.equals("2")) {
-                int arraySolution[] = partida.getArraySolucion();
-                String solution = "";
+            if(seleccionaOpcion.equals("2")) {
+                int arraySolucion[] = partida.getArraySolucion();
+                String solucion = "";
 
-                for(int index = 0; index < arraySolution.length; index++) {
-                    solution = solution + arraySolution[index];
+                for(int i = 0; i < arraySolucion.length; i++) {
+                    solucion = solucion + arraySolucion[i];
                 }
-
-                values[0] = solution;
+                valores[0] = solucion;
             }
 
             do {
-
                 mostrarJuego.limpiar();
                 mostrarJuego.muestraResultado(partida.getArrayIntentos());
 
-
                 do {
                     mostrarJuego.introducirNumero();
-
-                    valor = values[valuesIntent];
+                    valor = valores[valoresIntentos];
 
                     if(partida.revisaNumero(valor) == false) {
                         mostrarJuego.revisarNumero(valor);
-                        valuesIntent++;
+                        valoresIntentos = valoresIntentos + 1;
                     }
-
                 }while(partida.revisaNumero(valor) == false);
-
                 partida.introduceIntentos(valor);
 
                 blanca.revisaBola(partida.getArrayIntentos(), partida.getArraySolucion(), partida.getIntentos());
@@ -147,7 +180,7 @@ public class Jugar {
                     fin = false;
                 }
 
-                valuesIntent++;
+                valoresIntentos = valoresIntentos + 1;
 
             }while(fin != true);
 
@@ -158,7 +191,7 @@ public class Jugar {
                 mostrarJuego.perder(partida.getArraySolucion());
             }
         }
-        if (selectedOption.equals("1")){
+        if (seleccionaOpcion.equals("1")){
             mostrarJuego.ganar();
         }
     }
