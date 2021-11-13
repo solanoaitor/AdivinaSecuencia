@@ -4,10 +4,22 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @autor       Desirée y Aitor
+ * @name 		MostrarJuego.java
+ * @description	Clase que mostrará por pantalla las instrucciones del juego así como el mismo juego
+ *
+ */
 public class MostrarJuego {
 
+    /**
+     * @constructor     Constructor per defecte de la classe
+     */
     public MostrarJuego() {}
 
+    /**
+     * @instrucciones    Mostrará las instrucciones del juego
+     */
     public void instrucciones() {
         System.out.println("-------------------------");
         System.out.println("Juego Adivina Secuecia");
@@ -24,7 +36,10 @@ public class MostrarJuego {
         System.out.println("--------------------------");
     }
 
-    //TODO: reducir complejidad
+    /**
+     * @muestraResultado    Mostrará los resultados de los intentos actuales de las bolas negras y blancas
+     * @param intentos      Pasaremos por parametros arrayIntentos
+     */
     public void muestraResultado(String intentos[][]) {
         System.out.println("                 Bolas       Blancas  Negras" );
         int limiteIntentos = 10;
@@ -61,21 +76,35 @@ public class MostrarJuego {
         }
     }
 
+    /**
+     * @introducirNumero    Muestra los intentos actuales
+     */
     public void introducirNumero() {
         System.out.println("");
         System.out.print("Intento:  ");
     }
 
+    /**
+     * @revisarNumero   Revisa el formato incorrecto introducido.
+     * @param valor     Intento erroneo intriducido por el usuario.
+     */
     public void revisarNumero(String valor) {
         System.out.println("\t Incorrecto,  " + valor + " no és un formato válido.");
     }
 
+    /**
+     * @ganar       Muestra un mensaje cuando el usuario gana la partida
+     */
     public void ganar() {
         System.out.println("");
         System.out.println("Muy bien, has ganado!");
         System.out.println("Pulsa enter para continuar");
     }
 
+    /**
+     * @perder      Muestra un mensaje cuando el usuario realiza todos los intentos y no adivina el número correcto
+     * @param solucion  Pasamos la solución correcta para que el usuario pueda visualizarlo
+     */
     public void perder(int [] solucion) {
         System.out.println("");
         System.out.print("Lo siento has perdido, la solución era: ");
@@ -83,11 +112,17 @@ public class MostrarJuego {
         System.out.println("");
         System.out.println("Apretar enter para continuar...");
     }
-    
+
+    /**
+     * @salirJuego      Muestra un mensaje al usuario cuando selecciona la opción de salir del juego
+     */
     public void salirJuego() {
         System.out.println("Saliendo del juego.");
     }
 
+    /**
+     * @limpiar         Limpia los mensajes escritos por consola
+     */
     public void limpiar() {
         for (int i = 0; i < 200; i++) {
             System.out.println();

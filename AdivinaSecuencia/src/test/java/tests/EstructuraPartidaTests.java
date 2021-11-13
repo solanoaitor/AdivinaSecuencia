@@ -16,7 +16,7 @@ public class EstructuraPartidaTests {
 
     /**
      * Este método pretende comprovar si funciona el método getIntentos()
-     * i se obtienen los intentos actuales correctamente.
+     * y se obtienen los intentos actuales correctamente.
      * ACLARACIÓN: Inicialmente, cuando empezamos el juego no hemos realizado ningun
      * intento.
      * @param
@@ -33,7 +33,7 @@ public class EstructuraPartidaTests {
 
     /**
      * Este método pretende comprovar si funciona el método setIntentos()
-     * i se asigna correctamente el número de intentos realizados.
+     * y se asigna correctamente el número de intentos realizados.
      * @param
      * @return void
      */

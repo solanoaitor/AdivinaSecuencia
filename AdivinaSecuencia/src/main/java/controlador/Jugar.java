@@ -11,7 +11,6 @@ import java.util.Scanner;
  * @author 		Desirée y Aitor
  * @name 		Jugar.java
  * @description	Jugar: Controlador principal de la aplicación, donde ejecutará un main de nuestro juego.
- *
  * @test JugarTests.java
  *       Ejecuta los test automaticamente tanto de modelo, visto y controlador.
  *       Creados con valores mockObjects 100% success.
@@ -21,7 +20,6 @@ import java.util.Scanner;
  *       - Clicar en Play con coverage en JugarTest.java, ejecutará automaticamente los test con sus respectivos resultados.
  *       - Si ejecutamos el test sin comentar el main del juego nos saldrá un coverage menor al 100% ya que no pasará por esas
  *       lineas de código.
- *
  * @user Esta parte únicamente es para jugar al juego, seleccionaremos la opción de ejecutar el main y podremos jugar al juego.
  *       Debemos comprobar que el método 'public static void main(String[] args)' no esté comentado.
  *
