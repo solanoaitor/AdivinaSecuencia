@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @autor       Desirée y Aitor
+ * @author       Desirée y Aitor
  * @name 		MostrarJuego.java
  * @description	Clase que mostrará por pantalla las instrucciones del juego así como el mismo juego
  *
