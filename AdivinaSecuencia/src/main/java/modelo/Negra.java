@@ -35,10 +35,10 @@ public class Negra implements Bola{
     public boolean revisaBola(String intentos[][], int solucionFinal[], int intento) {
         bolaNegra = 0;
         encontrado = false;
-        length_solucionFinal = solucionFinal.length;
+        int length_solucionFinal = solucionFinal.length;
         stringArray = new String[solucionFinal.length];
-
-        for (int i = 0, j=1; i < length_solucionFinal, j < length_solucionFinal; i++,j++){
+        int i = 0, j = 1;
+        for (i = 0, j=1; i < length_solucionFinal && j < length_solucionFinal; i++,j++){
 
             stringArray[i] = String.valueOf(solucionFinal[(i + j)%4]);
 
