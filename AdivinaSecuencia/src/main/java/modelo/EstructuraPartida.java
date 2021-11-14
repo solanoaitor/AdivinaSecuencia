@@ -53,13 +53,15 @@ public class EstructuraPartida {
      * @return          Devolvemos true o false si es de 4 dígitos o no
      */
     public boolean revisaNumero(String valor) {
-        if(valor.length() != 4) {
-            return false;
+        if(valor.length() == 4) {
+            try {
+                Integer.parseInt(valor);
+                return true;
+            } catch (NumberFormatException e) {
+                return false;
+            }
         }
-        try {
-            Integer.parseInt(valor);
-            return true;
-        } catch (NumberFormatException e) {
+        else {
             return false;
         }
     }
