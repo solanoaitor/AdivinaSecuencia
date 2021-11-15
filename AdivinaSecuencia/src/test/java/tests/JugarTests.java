@@ -19,17 +19,17 @@ public class JugarTests {
      */
     @Test
     public void testMain() {
-        MockPlay mockPlay = new MockPlay();
+        MockJugar mockJugar = new MockJugar();
 
-        mockPlay.introduceOptions();
-        mockPlay.introduceValues();
+        mockJugar.selecionaOpcion();
+        mockJugar.introduceValor();
 
-        String options[] = mockPlay.getOptions();
-        String values[] = mockPlay.getValues();
+        String opciones[] = mockJugar.getOpciones();
+        String valores[] = mockJugar.getValores();
 
-        for(int index = 0; index < options.length; index++) {
-            Jugar play = new Jugar();
-            play.testMain(options[index], values);
+        for(int i = 0; i < opciones.length; i++) {
+            Jugar jugar = new Jugar();
+            jugar.testMain(opciones[i], valores);
         }
 
 

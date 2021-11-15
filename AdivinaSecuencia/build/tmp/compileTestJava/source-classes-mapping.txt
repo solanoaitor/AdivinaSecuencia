@@ -1,12 +1,12 @@
 tests/MockRevisarNumeros.java
  tests.MockRevisarNumeros
-tests/MockPlay.java
- tests.MockPlay
-tests/EstructuraPartidaTests.java
- tests.EstructuraPartidaTests
 tests/MockBolas.java
  tests.MockBolas
-tests/JugarTests.java
- tests.JugarTests
+tests/EstructuraPartidaTests.java
+ tests.EstructuraPartidaTests
 tests/BolasTests.java
  tests.BolasTests
+tests/JugarTests.java
+ tests.JugarTests
+tests/MockJugar.java
+ tests.MockJugar

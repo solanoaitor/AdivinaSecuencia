@@ -60,7 +60,7 @@ public class Jugar {
     /**
      * @main    Ejecución de el programa para que el usuario pueda jugar.
      */
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);
         MostrarJuego mostrarJuego = new MostrarJuego();
@@ -122,7 +122,7 @@ public class Jugar {
                 new java.util.Scanner(System.in).nextLine();
             }
         }while(opcion != "0");
-    }
+    }/*
 
     /**
      * @testMain				Execución del programa para realizar todo el test, funciona con números fijados.

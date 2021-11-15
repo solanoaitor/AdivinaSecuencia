@@ -7,9 +7,9 @@ package tests;
  * arrays de diferentes opciones y valores para posteriormente poder testear el main en el fichero
  * JugarTests.java.
  */
-public class MockPlay {
-    private String options[];
-    private String values[];
+public class MockJugar {
+    private String opcion[];
+    private String valores[];
 
     /**
      * Este método pretende inicializar los arrays de opciones y de valores.
@@ -20,9 +20,9 @@ public class MockPlay {
      * @param
      * @constructor MockPlay
      */
-    public MockPlay() {
-        this.options = new String[3];
-        this.values = new String[12];
+    public MockJugar() {
+        this.opcion = new String[3];
+        this.valores = new String[12];
     }
 
     /**
@@ -30,8 +30,8 @@ public class MockPlay {
      * @param
      * @return String[]
      */
-    public String[] getOptions() {
-        return options;
+    public String[] getOpciones() {
+        return opcion;
     }
 
     /**
@@ -39,8 +39,8 @@ public class MockPlay {
      * @param
      * @return String[]
      */
-    public String[] getValues() {
-        return values;
+    public String[] getValores() {
+        return valores;
     }
 
     /**
@@ -50,10 +50,10 @@ public class MockPlay {
      * @param
      * @return void
      */
-    public void introduceOptions() {
-        options[0] = "2";
-        options[1] = "1";
-        options[2] = "0";
+    public void selecionaOpcion() {
+        opcion[0] = "2";
+        opcion[1] = "1";
+        opcion[2] = "0";
     }
 
     /**
@@ -64,18 +64,18 @@ public class MockPlay {
      * @param
      * @return void
      */
-    public void introduceValues() {
-        values[0] = "";
-        values[1] = "9000";
-        values[2] = "9010";
-        values[3] = "9001";
-        values[4] = "00005";
-        values[5] = "0000";
-        values[6] = "9000";
-        values[7] = "0900";
-        values[8] = "1543";
-        values[9] = "1543";
-        values[10] = "1543";
-        values[11] = "90ab";
+    public void introduceValor() {
+        valores[0] = "";
+        valores[1] = "9000";
+        valores[2] = "9010";
+        valores[3] = "9001";
+        valores[4] = "00005";
+        valores[5] = "0000";
+        valores[6] = "9000";
+        valores[7] = "0900";
+        valores[8] = "1543";
+        valores[9] = "1543";
+        valores[10] = "1543";
+        valores[11] = "90ab";
     }
 }
