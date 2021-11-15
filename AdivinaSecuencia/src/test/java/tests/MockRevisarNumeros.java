@@ -17,7 +17,7 @@ public class MockRevisarNumeros {
      * @constructor MockRevisarNumeros
      */
     public MockRevisarNumeros() {
-        this.numerosCorrectos = new String[10];
+        this.numerosCorrectos = new String[3];
         this.numerosIncorrectos = new String[10];
     }
 
@@ -48,13 +48,6 @@ public class MockRevisarNumeros {
         this.numerosCorrectos[0] = "0000";
         this.numerosCorrectos[1] = "1234";
         this.numerosCorrectos[2] = "5678";
-        this.numerosCorrectos[3] = "9012";
-        this.numerosCorrectos[4] = "0001";
-        this.numerosCorrectos[5] = "0010";
-        this.numerosCorrectos[6] = "0100";
-        this.numerosCorrectos[7] = "1000";
-        this.numerosCorrectos[8] = "1001";
-        this.numerosCorrectos[9] = "1010";
     }
 
     /**
